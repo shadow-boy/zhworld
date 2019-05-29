@@ -1,0 +1,98 @@
+#banner {
+    background: url("../img/bannerImg.png") no-repeat center;
+    background-size: cover;
+}
+
+/*∆Û“µΩÈ…‹*/
+.introduce {
+    margin: 60px 0;
+    width: 100%;
+}
+
+.introduce .intr_title_out {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.introduce .intr_title {
+    background: url("./../img/index_icon1.png") no-repeat;
+    width: 200px;
+    height: 80px;
+    margin: 0 auto 30px auto;
+    background-size: contain;
+}
+
+.introduce .intr_ul {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.introduce .intr_li {
+    width: 100%;
+    height: 248px;
+    border: 1px solid #e2e2e2;
+    box-shadow: 3px 3px 30px 2px #dedede;
+}
+
+.introduce .intr_liO {
+    float: left;
+}
+
+.introduce .intr_liT {
+    float: right;
+}
+
+
+.introduce .intr_li .intr_ul_in {
+    margin: 72px 30px 0 30px;
+}
+
+.introduce .intr_li li {
+    float: left;
+    height: 100%;
+}
+
+.introduce .intr_li .intr_li_in1 {
+    width: 22%;
+    text-align: center;
+    color: #7B7B7B;
+    margin-top: 15px;
+}
+
+.introduce .intr_li .intr_li_in2 {
+    width: 65%;
+    font-size: 13px;
+    margin-left: 55px;
+    color: #7B7B7B;
+}
+
+.introduce .intr_li .intr_li_in1 .intr_span {
+    display: inline-block;
+    background: url("../img/index_icon3.png") no-repeat;
+    width: 42px;
+    height: 38px;
+}
+
+.introduce .intr_li .intr_li_in1 .intr_wz {
+    display: block;
+    margin-top: 5px;
+}
+
+.introduce .intr_liT .intr_span {
+    background: url("../img/index_icon4.png") no-repeat !important;
+}
+
+
+@media screen and (max-width: 770px) {
+.introduce .intr_ul {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.introduce .intr_li .intr_li_in2{
+    margin-left: 0;
+}
+.introduce .intr_li .intr_ul_in{
+    margin: 20px 10px 0 10px
+}
+}

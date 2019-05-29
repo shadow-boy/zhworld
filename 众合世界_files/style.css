@@ -1,0 +1,769 @@
+/*导航1*/
+#navO{
+    height: 43px;
+    line-height: 43px;
+    background: #333333;
+    width: 100%;
+    color: #F4F3F3;
+    font-size: 12px;
+}
+#navO .loginL{
+    float: left;
+    margin: 0 10px;
+}
+#navO .loginR{
+    float: right;
+}
+#navO .loginRLI{
+    float: left;
+    margin: 0 25px;
+    cursor: pointer;
+}
+#navO .liNavA_tel{
+    font-size: 16px;
+}
+#navO .hoveNav{
+    display: none;
+    position: absolute;
+    width: 100%;
+    /* height: 100px; */
+    background: #fff;
+    z-index: 11111;
+    left: 0;
+    top: 43px;
+}
+#navO .hoveNav div{
+    height: 20px;
+    line-height: 20px;
+    text-align: left;
+    margin: 12px 20px;
+}
+#navO .hoveNav div a{
+    color: #2e2e2e;
+    font-size: 12px;
+}
+#navO .hoveNav div a:hover{
+    color: deepskyblue;
+}
+#navO .liNavA_dl{
+    position: relative;
+}
+#navO .liNavA_dl:hover .hoveNav{
+    display: block;
+}
+#navO .inNav{
+    width: 1200px;
+    margin: 0 auto;
+    background: #333333;
+    height: 100%;
+}
+#navO .jt{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url("../img/jiantou.png") no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+#navO a{
+    color: #ECECEC;
+    text-decoration: none;
+}
+#navO a:hover{
+    color: deepskyblue;
+}
+#navO .telImg{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background: url("../img/smallImg.png") no-repeat -11px -12px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/*banner*/
+#banner{
+    height: 476px;
+    width: 100%;
+    background: url("../img/bannerImg.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+#banner .outTwoCodeDiv{
+    width: 1200px;
+    height: 200px;
+    margin: 60px auto 0 auto;
+    /* overflow: hidden; */
+    position: relative;
+}
+#banner .twoCodeDiv{
+    position: absolute;
+    left: 60px;
+    width: 225px;
+    top: 55px;
+}
+#banner .twoCodeDiv img{
+    width: 100%;
+}
+#banner .twoCodeDiv span{
+    display: inline-block;
+    font-size: 28px;
+    font-weight: bold;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    margin-top: 15px;
+}
+
+/*导航2*/
+#navT{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 0;
+    left: 0;
+}
+#navT .navT_in{
+    width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+#navT .logoLeft{
+    float: left;
+    height: 60px;
+    line-height: 60px;
+}
+#navT .logoLeft span{
+    display: inline-block;
+    height: 100%;
+    width: 190px;
+    background: url("../img/logoText.png") no-repeat 0px 2px;
+    background-size: contain;
+}
+#navT .ul_navT{
+    float: right;
+    height: 100%;
+    line-height: 60px;
+    font-size: 14px;
+}
+#navT .ul_navT li:last-child{
+    margin-right: 6px;
+}
+#navT .ul_navT li{
+    float: left;
+    margin: 0 20px;
+}
+#navT .ul_navT li:hover a{
+    color: #1688D0;
+}
+#navT .ul_navT a{
+    color: #333;
+    font-weight: 600;
+    padding: 0 18px;
+}
+
+/*印章材质*/
+.yzcz{
+    width: 1200px;
+    margin: 40px auto;
+}
+.yzcz .ul_yzcz{
+
+}
+.yzcz .ul_yzcz li{
+    float: left;
+    width: 33.3333333%;
+    font-size: 16px;
+    /* border: 1px solid #ccc; */
+    /* padding: 10px 10px; */
+    text-align: center;
+    margin: 25px 0;
+}
+.yzcz .ul_yzcz li a{
+    display: inline-block;
+    width: 85%;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    padding: 12px;
+}
+.yzcz li a img{
+    width: 100%;
+}
+.yzcz li a .img_name{
+    margin-top: 25px;
+    font-size: 16px;
+    color: rgba(86,86,86,1);
+    font-weight: 600;
+}
+.yzcz li a .img_detail{
+    margin-top: 10px;
+    font-size: 12px;
+    color: rgba(175,175,175,1);
+    margin-bottom: 35px;
+}
+.yzcz li a:hover .img_name{
+    color: rgba(33,161,219,1);
+}
+.yzcz li a:hover{
+    transition: .1s linear;
+    box-shadow: 3px 3px 20px 3px #e6e6e6;
+}
+.yzcz .title_yzcz{
+    width: 200px;
+    height: 80px;
+    margin: 0 auto 30px auto;
+    background: url("../img/text1.png") no-repeat;
+    background-size: contain;
+}
+
+/*印章图样非复用css*/
+
+.yzty .title_yzcz{
+    width: 200px;
+    height: 80px;
+    margin: 0 auto 30px auto;
+    background: url("../img/text2.png") no-repeat;
+    background-size: contain;
+}
+
+
+/*底部*/
+.foot{
+    height: 320px;
+    width: 100%;
+    background: rgba(240,240,240,1);
+    margin-top: 60px;
+    border-top: 1px solid transparent;
+}
+.foot .footIn{
+    width: 1200px;
+    margin: 0 auto;
+    background: rgba(240,240,240,1);
+    font-size: 16px;
+    height: 290px;
+    padding: 30px 0 0 0;
+}
+.foot .footTitle{
+    font-size: 16px;
+    color: rgba(102,102,102,1);
+}
+.foot .footUL_1{
+    color: rgba(152,152,152,1);
+    font-size: 14px;
+}
+.foot .footUL_1 li{
+    float: left;
+    margin-right: 85px;
+}
+.foot .footUL_1 li:hover{
+    color: #1688D0;
+    cursor: pointer;
+}
+.foot .sameF{
+    padding: 0 20px;
+    margin-top: 25px;
+}
+.foot .footUL_1 li .icon{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background-image: url("../img/smallImg.png");
+    background-repeat: no-repeat;
+}
+.foot .footUL_1 li .icon1{
+    background-position:  -60px -16px;
+    margin-right: 3px;
+}
+.foot .footUL_1 li .icon2{
+    background-position: -100px -16px;
+    margin-right: 3px;
+}
+.foot .footUL_1 li .icon3{
+    background-position: -183px -15px;
+    margin-right: 3px;
+}
+.foot .footUL_1 li .icon4{
+    background-position: -142px -14px;
+    margin-right: 5px;
+}
+.foot .footUL_2 li{
+    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 30px;
+}
+.foot .footUL_2 li.icon5{
+    background: url("../img/smallImg.png") no-repeat -6px -50px;
+}
+.foot .footUL_2 li.icon6{
+    background: url("../img/smallImg.png") no-repeat -89px -50px;
+}
+.foot .footUL_2 li.icon7{
+    background: url("../img/smallImg.png") no-repeat -166px -50px;
+}
+.foot .footHR{
+    height: 1px;
+    background: #d1d1d1;
+    margin-top: 60px;
+}
+.foot .footZH{
+    margin-top: 25px;
+    color: rgba(108,110,117,1);
+    font-size: 12px;
+}
+
+/*登录注册弹出相关*/
+.landRegMask {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 100;
+}
+
+.landRegMask span {
+    display: inline-block;
+}
+
+.landRegMask .landRegBox {
+    width: 542px;
+    height: 412px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.landRegMask .landRegClass {
+    width: 100%;
+    height: 80px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.landRegMask .landUser {
+    float: left;
+    width: 100%;
+    height: 81px;
+    background: #fff;
+    color: rgba(98, 111, 121, 1);
+    line-height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+
+}
+
+.landRegMask .landTeacher {
+    float: right;
+    width: 268px;
+    height: 81px;
+    background: rgba(118, 162, 177, 0.66);
+    color: #fff;
+    line-height: 80px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    cursor: pointer;
+}
+
+.landRegMask .landInput {
+    padding: 10px;
+    font-size: 14px;
+    height: 312px;
+    background: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.landRegMask .landInputCodeTextOut {
+    width: 332px;
+    display: inline-block;
+    float: right;
+}
+
+.landRegMask .landInputPhone {
+    width: 430px;
+    margin: 40px auto 20px auto;
+    height: 50px;
+    line-height: 50px;
+}
+
+.landRegMask .landInputCode {
+    width: 430px;
+    margin: 20px auto;
+    height: 50px;
+    line-height: 50px;
+}
+
+.landRegMask .landInputOk {
+    width: 430px;
+    margin: 30px auto 0 auto;
+}
+
+.landRegMask .landInputOkClick:hover {
+    background: rgb(36, 179, 244);
+}
+
+.landRegMask .landInputOkClick {
+    width: 332px;
+    height: 47px;
+    background: rgba(33, 161, 219, 1);
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    /*margin: 30px auto 0 auto;*/
+    text-align: center;
+    line-height: 47px;
+    cursor: pointer;
+    float: right;
+}
+
+.landRegMask .landClose {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.landRegMask .landCloseImg {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    color: #fff;
+    font-size: 40px;
+    line-height: 44px;
+    cursor: pointer;
+}
+
+.landRegMask .landInputText {
+    float: left;
+}
+
+.landRegMask .landInputPhoneText {
+    float: right;
+    width: 330px;
+    height: 45px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0;
+    border: none;
+    border: 1px solid rgba(194, 193, 193, 1);
+    text-indent: 5px
+}
+
+.landRegMask .landInputCodeTitle {
+    float: left;
+}
+
+.landRegMask .landInputCodeText {
+    float: left;
+    width: 200px;
+    height: 45px;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0;
+    border: none;
+    border: 1px solid rgba(194, 193, 193, 1);
+    text-indent: 5px;
+}
+
+.landRegMask .landInputGetCode {
+    float: right;
+    width: 117px;
+    height: 47px;
+    background: rgba(33, 161, 219, 1);
+    border-radius: 4px;
+    color: #fff;
+    text-align: center;
+    line-height: 47px;
+    cursor: pointer;
+}
+
+.landRegMask .landInputGetCode:hover {
+    background: rgb(36, 179, 244);
+}
+.landRegMask .regPrompt{
+    width: 430px;
+    margin: 15px auto 0 auto;
+    font-size: 12px;
+    text-align: left;
+}
+.landRegMask .regPromptText{
+    width: 332px;
+    float: right;
+}
+.landRegMask .regPromptText span{
+    color: rgba(153,153,153,1);
+}
+.landRegMask .regPromptText a{
+    color: rgba(33,161,219,1);
+}
+/*上传弹框*/
+.landRegMask .uploadBoxClose{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -70px;
+}
+.landRegMask .uploadBox{
+    display: none;
+    width: 785px;
+    height: 560px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-55%);
+    margin: 0 auto;
+    border-radius: 10px;
+    text-align: center;
+    background: #fff;
+}
+.landRegMask .uploadImgBox{
+    width: 646px;
+    margin: 0 auto;
+    border-top: 1px solid transparent;
+}
+.landRegMask .uploadImgBoxT{
+    height: 183px;
+    margin: 28px auto;
+}
+.landRegMask .uploadImgBoxB{
+    height: 183px;
+    width: 646px;
+    margin: 20px auto;
+}
+.landRegMask .uploadImgBoxB .uploadFileOut{
+    position: relative;
+    width: 646px;
+    height: 100%;
+}
+.landRegMask .uploadFileOut{
+    position: relative;
+    display: inline-block;
+    width: 309px;
+    height: 100%;
+    border: 1px dashed #D1D1D1;
+}
+.landRegMask .uploadFileOutL{
+    float: left;
+}
+.landRegMask .uploadFileOutR{
+    float: right;
+}
+.landRegMask .uploadFileOut input{
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    cursor: pointer;
+    background: transparent;
+    outline: medium none;
+    filter:alpha(opacity=0);
+    -moz-opacity:0;
+    opacity:0;
+    left:0px;
+    top: 0px;
+    border: none;
+    position: absolute;
+    outline: 0;
+    opacity: 0;
+}
+.landRegMask .uploadFileOut input::-webkit-file-upload-button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    position: absolute;
+    outline: 0;
+    opacity: 0;
+}
+.landRegMask .uploadFileOut .uploadFileText{
+    color: rgba(170,169,169,1);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 100%;
+    width: 100%;
+}
+.landRegMask .uploadFileOut .pAdd{
+    font-size: 70px;
+}
+.landRegMask .uploadFileOut .pText{
+    font-size: 16px;
+}
+.landRegMask .uploadRegClick{
+    width: 646px;
+    margin: 30px auto 0 auto;
+}
+.landRegMask .uploadRegClick div{
+    width: 330px;
+    height: 47px;
+    background: rgba(33, 161, 219, 1);
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 47px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+.landRegMask .uploadRegClick div:hover{
+    background: rgb(38, 185, 251);
+}
+.landRegMask .uploadReg{
+    width: 430px;
+    margin: 15px auto 0 auto;
+    font-size: 12px;
+    text-align: left;
+}
+.landRegMask .uploadRegText{
+    width: 332px;
+    float: right;
+}
+.landRegMask .uploadRegText span{
+    color: rgba(153,153,153,1);
+}
+.landRegMask .uploadRegText a{
+    color: rgba(33,161,219,1);
+}
+.landRegMask .imgNode{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 10;
+    background: #fff;
+}
+.landRegMask .imgNode img{
+    height: 100%;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 770px) {
+    /*顶部导航*/
+
+    #navO .inNav{
+        width: 100%;
+        height: auto;
+    }
+    #navO .loginL {
+        float: left;
+        margin: 0 10px;
+        display: none;
+    }
+    #navO .loginR {
+        float: left;
+        width: 100%;
+    }
+
+    #navO .liNavA_tel {
+        float: right;
+    }
+    #navO .loginRLI {
+
+        margin: 0 10px;
+        cursor: pointer;
+    }
+    /*-------------------*/
+
+    /*banner*/
+    #navT{
+        height: auto;
+    }
+    #navT .navT_in{
+        width: 100%;
+    }
+    #navT .logoLeft{
+        display: none;
+    }
+
+    #navT .ul_navT{
+        float: none;
+        line-height: 40px;
+    }
+    #navT .ul_navT li{
+        margin: 0;
+        width: 20%;
+    }
+    #navT .ul_navT a{
+       padding: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    #navT .ul_navT li:last-child {
+        margin-right:0;
+    }
+
+    .yzcz{
+        width: 100%;
+    }
+    .foot .footIn{
+        width: 100%;
+    }
+    .foot .footUL_1 li{
+        margin-right: 15px;
+        margin-bottom: 10px;
+
+    }
+
+    .yzcz .ul_yzcz li a{
+        padding: 8px;
+        height: 235px;
+    }
+    #banner .twoCodeDiv{
+       position: relative;
+        margin: 0 auto;
+        left: 0;
+    }
+    #banner .outTwoCodeDiv{
+        width: 100%;
+    }
+
+    .landRegMask .landRegBox{
+        width: 100%;
+    }
+    .landRegMask .landUser{
+        width: 100%;
+    }
+    .landRegMask .landTeacher{
+        width: 50%;
+    }
+    .landRegMask .landInputPhone{
+        width: 100%;
+    }
+    .landRegMask .landInputPhoneText{
+        width: auto;
+        float: left;
+    }
+    .landRegMask .landInputCodeText{
+        float: left;
+        width: auto;
+    }
+    .landRegMask .landInputCodeTextOut{
+        float: left;
+        width: auto;
+    }
+    .landRegMask .landInputOk{
+        width: auto;
+        margin: 0 auto;
+    }
+    .landRegMask .landInputOkClick{
+        width: 90%;
+        margin:  auto;
+    }
+    .landRegMask .regPromptText{
+        float: none;
+        margin: 0 auto;
+    }
+    .yzcz .ul_yzcz li{
+        width: 100%;
+    }
+}

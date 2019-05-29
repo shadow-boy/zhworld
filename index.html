@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.yzyjyz.com/Index/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>众合世界</title>
+    <link rel="stylesheet" href="./众合世界_file/reset.css">
+    <link rel="stylesheet" href="./众合世界_files/style.css">
+    
+<style type="text/css" abt="234"></style><script>//remove 17173 video ad
+doAdblock();
+function doAdblock(){
+    (function() {
+        function A() {}
+        A.prototype = {
+            rules: {
+                '17173_in':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFile(Customer)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_in_20150522.swf"
+                },
+                '17173_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/PreloaderFileFirstpage\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_out_20150522.swf"
+                },
+                '17173_live':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream(_firstpage)?\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173_stream_20150522.swf"
+                },
+                '17173_live_out':{
+                    'find':/http:\/\/f\.v\.17173cdn\.com\/(\d+\/)?flash\/Player_stream_(custom)?Out\.swf/,
+                    'replace':"http://swf.adtchrome.com/17173.out.Live.swf"
+                }
+            },
+            _done: null,
+            get done() {
+                if(!this._done) {
+                    this._done = new Array();
+                }
+                return this._done;
+            },
+            addAnimations: function() {
+                var style = document.createElement('style');
+                style.type = 'text/css';
+                style.innerHTML = 'object,embed{\
+                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;\
+                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;\
+                -o-animation-duration:.001s;-o-animation-name:playerInserted;\
+                animation-duration:.001s;animation-name:playerInserted;}\
+                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}\
+                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}';
+                document.getElementsByTagName('head')[0].appendChild(style);
+            },
+            animationsHandler: function(e) {
+                if(e.animationName === 'playerInserted') {
+                    this.replace(e.target);
+                }
+            },
+            replace: function(elem) {
+                if(this.done.indexOf(elem) != -1) return;
+                this.done.push(elem);
+                var player = elem.data || elem.src;
+                if(!player) return;
+                var i, find, replace = false;
+                for(i in this.rules) {
+                    find = this.rules[i]['find'];
+                    if(find.test(player)) {
+                        replace = this.rules[i]['replace'];
+                        if('function' === typeof this.rules[i]['preHandle']) {
+                            this.rules[i]['preHandle'].bind(this, elem, find, replace, player)();
+                        }else{
+                            this.reallyReplace.bind(this, elem, find, replace)();
+                        }
+                        break;
+                    }
+                }
+            },
+            reallyReplace: function(elem, find, replace) {
+                elem.data && (elem.data = elem.data.replace(find, replace)) || elem.src && ((elem.src = elem.src.replace(find, replace)) && (elem.style.display = 'block'));
+                var b = elem.querySelector("param[name='movie']");
+                this.reloadPlugin(elem);
+            },
+            reloadPlugin: function(elem) {
+                var nextSibling = elem.nextSibling;
+                var parentNode = elem.parentNode;
+                parentNode.removeChild(elem);
+                var newElem = elem.cloneNode(true);
+                this.done.push(newElem);
+                if(nextSibling) {
+                    parentNode.insertBefore(newElem, nextSibling);
+                } else {
+                    parentNode.appendChild(newElem);
+                }
+            },
+            init: function() {
+                var handler = this.animationsHandler.bind(this);
+                document.body.addEventListener('webkitAnimationStart', handler, false);
+                document.body.addEventListener('msAnimationStart', handler, false);
+                document.body.addEventListener('oAnimationStart', handler, false);
+                document.body.addEventListener('animationstart', handler, false);
+                this.addAnimations();
+            }
+        };
+        new A().init();
+    })();
+}
+//remove baidu search ad
+if(document.URL.indexOf('www.baidu.com') >= 0){
+    if(document && document.getElementsByTagName && document.getElementById && document.body){
+        var aa = function(){
+            var all = document.body.querySelectorAll("#content_left div,#content_left table");
+            for(var i = 0; i < all.length; i++){
+                if(/display:\s?(table|block)\s!important/.test(all[i].getAttribute("style"))){all[i].style.display= "none";all[i].style.visibility='hidden';}
+            }
+            all = document.body.querySelectorAll('.result.c-container[id="1"]');
+            //if(all.length == 1) return;
+            for(var i = 0; i < all.length; i++){
+                if(all[i].innerHTML && all[i].innerHTML.indexOf('广告')>-1){
+                    all[i].style.display= "none";all[i].style.visibility='hidden';
+                }
+            }
+        }
+        aa();
+        document.getElementById('wrapper_wrapper').addEventListener('DOMSubtreeModified',aa)
+    };
+}
+//remove sohu video ad
+if (document.URL.indexOf("tv.sohu.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//remove 56.com video ad
+if (document.URL.indexOf("56.com") >= 0){
+    if (document.cookie.indexOf("fee_status=true")==-1){document.cookie='fee_status=true'};
+}
+//fore iqiyi enable html5 player function
+if (document.URL.indexOf("iqiyi.com") >= 0){
+    if (document.cookie.indexOf("player_forcedType=h5_VOD")==-1){
+        document.cookie='player_forcedType=h5_VOD'
+        if(localStorage.reloadTime && Date.now() - parseInt(localStorage.reloadTime)<60000){
+            console.log('no reload')
+        }else{
+            location.reload()
+            localStorage.reloadTime = Date.now();
+        }
+    }
+}
+</script><style type="text/css">object,embed{                -webkit-animation-duration:.001s;-webkit-animation-name:playerInserted;                -ms-animation-duration:.001s;-ms-animation-name:playerInserted;                -o-animation-duration:.001s;-o-animation-name:playerInserted;                animation-duration:.001s;animation-name:playerInserted;}                @-webkit-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-ms-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @-o-keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}                @keyframes playerInserted{from{opacity:0.99;}to{opacity:1;}}</style></head>
+<body style="">
+
+<!--导航1-->
+<div class="navO" id="navO">
+    <div class="inNav clearfix">
+        <div class="loginL">您好，欢迎来到众合世界</div>
+        <ul class="loginR">
+            <!--
+                care：
+                没登录：显示login_out，隐藏login_in
+                登录后：隐藏login_out，显示login_in
+            -->
+			            <li islogin="login_out" class="loginRLI">
+                <a href="javascript:void(0)" id="land">
+                    登录
+                </a>
+                <span class="loginFG">|</span>
+                <a href="javascript:void(0)" id="reg">
+                    注册
+                </a>
+            </li>
+			            <li class="loginRLI liNavA_tel"><a href="tel:85175536" style="color: #ffff"><span class="telImg"></span><span>85175536</span></a></li>
+        </ul>
+    </div>
+</div>
+
+<!--banner-->
+<div class="banner" id="banner" style="width: 100%;">
+    <!--导航2-->
+    <div class="navT" id="navT">
+        <div class="navT_in">
+            <div class="logoLeft">
+                <span></span>
+            </div>
+            <ul class="ul_navT">
+                
+                
+                <li><a href="http://www.yzyjyz.com/Index/index.html" style="color: #1688D0;">产品展示</a></li>
+                <li><a href="http://www.yzyjyz.com/Index/store.html">印章定制</a></li>
+                <li><a href="http://www.yzyjyz.com/Index/product.html">平台介绍</a></li>
+                <li><a href="http://www.yzyjyz.com/Index/aboutus.html">关于我们</a></li>
+                <li><a href="http://www.yzyjyz.com/Index/questions.html">常见问题</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+
+        <!--二维码-->
+        <div class="outTwoCodeDiv">
+            <div class="twoCodeDiv">
+                <img src="./众合世界_files/twoCode.png" alt="">
+                <span>扫码免费下载app</span>
+
+            </div>
+        </div>
+    </div>
+
+<link rel="stylesheet" href="./众合世界_files/product.css">	
+	
+    <!--企业介绍-->
+    <div class="yzcz introduce">
+        <div class="intr_title"></div>
+        <ul class="intr_ul clearfix">
+            
+            <li class="intr_li intr_liO wid-100">
+                <ul class="intr_ul_in clearfix">
+                    <li class="intr_li_in1">
+                        <span class="intr_span"></span>
+                        <span class="intr_wz">平台公告</span>
+                    </li>
+                    <li class="intr_li_in2">
+                        <span class="intr_texts">
+                        <p style="line-height: normal; margin-bottom: 5px; margin-top: 5px; text-align: left;"><span style="color:#ff0000"><span style="font-size: 24px;">“感恩大回馈”</span></span></p><p style="line-height: normal; margin-bottom: 5px; margin-top: 5px; text-align: left;"><span style="color:#ff0000"><span style="color: rgb(0, 112, 192); font-size: 24px;">刻章全部<span style="font-size: 24px; color: rgb(255, 0, 0);">“8”</span>折</span></span></p><p style="line-height: normal; margin-bottom: 5px; margin-top: 5px; text-align: left;"><span style="color: rgb(0, 112, 192); font-size: 20px;">拒绝无手续刻公章</span></p><p style="line-height: normal; margin-bottom: 5px; margin-top: 5px; text-align: left;"><span style="color: rgb(0, 112, 192); font-size: 20px;">活动时间：<span style="font-size: 24px; color: rgb(255, 0, 0);">仅限</span>2019年3月1日~2019年5月1日</span></p>                        </span>
+                    </li>
+                </ul>
+
+            </li>
+        </ul>
+    </div>
+    
+    <!--印章材质-->
+    <div class="yzcz">
+        <div class="title_yzcz"></div>
+        <ul class="ul_yzcz clearfix">
+            <li>
+                <a href="http://www.yzyjyz.com/Index/store.html">
+                    <img src="./众合世界_files/5bfcf0b85fa25.jpg" style="width:344px;height:181px;" alt="">
+                    <div class="img_name">电子印章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="http://www.yzyjyz.com/Index/store.html">
+                    <img src="./众合世界_files/5abe0a029d999.jpg" style="width:344px;height:181px;" alt="">
+                    <div class="img_name">光敏印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="http://www.yzyjyz.com/Index/store.html">
+                    <img src="./众合世界_files/5abe0a1547881.jpg" style="width:344px;height:181px;" alt="">
+                    <div class="img_name">铜质印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="http://www.yzyjyz.com/Index/store.html">
+                    <img src="./众合世界_files/5abe0a2752885.jpg" style="width:344px;height:181px;" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>			<!--<li>
+                <a href="/Index/store.html">
+                    <img src="/Public/home_pc/img/top1.fw.png" alt="">
+                    <div class="img_name">刚质印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="/Index/store.html">
+                    <img src="/Public/home_pc/img/top2.fw.png" alt="">
+                    <div class="img_name">光敏印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="/Index/store.html">
+                    <img src="/Public/home_pc/img/top3.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>-->
+        </ul>
+    </div>
+
+    <!--印章图样-->
+    <div class="yzcz yzty">
+        <div class="title_yzcz"></div>
+        <ul class="ul_yzcz clearfix">
+            <li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe08e33ba9c.jpg" alt="">
+                    <div class="img_name">公章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe090ce3468.jpg" alt="">
+                    <div class="img_name">财务专用章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe092c8b8ec.jpg" alt="">
+                    <div class="img_name">法定代表人名章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe093e2c161.jpg" alt="">
+                    <div class="img_name">发票专用章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe095dd7441.jpg" alt="">
+                    <div class="img_name">合同专用章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe0972002ed.jpg" alt="">
+                    <div class="img_name">报关专用章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe0993f2fc5.jpg" alt="">
+                    <div class="img_name">钢印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe09b650417.jpg" alt="">
+                    <div class="img_name">党组织公章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe09c9da564.jpg" alt="">
+                    <div class="img_name">工会公章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li><li>
+                <a href="javascript:;">
+                    <img src="./众合世界_files/5abe09df595bb.jpg" alt="">
+                    <div class="img_name">部门用章</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>			
+			<!--
+			
+			<li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zb.fw.png" alt="">
+                    <div class="img_name">光敏印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zc.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zd.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/ze.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zf.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail"></div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zg.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail">机关，团体，企业单位使用的印章</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zh.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail">机关，团体，企业单位使用的印章</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zi.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail">机关，团体，企业单位使用的印章</div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="/Public/home_pc/img/zd.fw.png" alt="">
+                    <div class="img_name">卓达进口回墨印</div>
+                    <div class="img_detail">机关，团体，企业单位使用的印章</div>
+                </a>
+            </li>
+			
+			-->
+			
+        </ul>
+    </div>
+
+    <!--底部-->
+<div class="foot">
+    <div class="footIn">
+        <p class="footTitle sameF">四川印君科技服务有限责任公司</p>
+        <ul class="footUL_1 sameF clearfix">
+            <li><span class="icon1 icon"></span><span class="footLI_text">成都高新区天府大道中段1388号11栋1单元7层13号</span></li>
+            <li><a href="tel:85175536"><span class="icon2 icon"></span><span class="footLI_text">85175536</span></a></li>
+            <li><a href="tel:18190688010"><span class="icon3 icon"></span><span class="footLI_text">18190688010</span></a></li>
+            <li><span class="icon4 icon"></span><span class="footLI_text">www.yinjun@163.com</span></li>
+        </ul>
+        <ul class="footUL_2 sameF clearfix">
+            <li class="icon5"></li>
+            <li class="icon6"></li>
+            <li class="icon7"></li>
+        </ul>
+        <div class="footHR sameF"></div>
+        <p class="footZH sameF">COPYRIGHT (©) 2017 四川印君科技服务有限责任公司</p>
+    </div>
+</div>
+
+<!--登录弹出相关-->
+<div class="landRegMask" id="landRegMask">
+    <div class="landRegBox">
+        <!--选择按钮-->
+        <div class="landRegClass clearfix" id="landRegClass">
+            <span class="landUser">用户登录</span>
+		</div>
+        <!--表单按钮-->
+        <div class="landInput">
+            <div class="landInputPhone clearfix">
+                <span class="landInputText">手机号：</span>
+                <input type="text" class="landInputPhoneText" id="landInputPhoneText">
+            </div>
+            <div class="landInputCode clearfix">
+                <span class="landInputCodeTitle">验证码：</span>
+                <div class="landInputCodeTextOut clearfix">
+                    <input type="text" class="landInputCodeText" id="landInputCodeText">
+                    <span class="landInputGetCode" onclick="clickBind(this,true)" id="landInputGetCode">获取验证码</span>
+                </div>
+			</div>
+            <div class="landInputOk clearfix" id="landInputOk">
+                <div class="landInputOkClick">登录</div>
+            </div>
+        </div>
+        <!--关闭按钮-->
+        <div class="landClose">
+            <span class="landCloseImg" id="landCloseImg">×</span>
+        </div>
+    </div>
+</div>
+
+<!--注册弹出相关-->
+<div class="landRegMask" id="regMask">
+    <div class="landRegBox" id="landRegBox">
+        <!--选择按钮-->
+        <div class="landRegClass clearfix" id="regClass">
+            <span class="landUser">用户注册</span>
+        </div>
+        <!--表单按钮-->
+        <div class="landInput">
+            <div class="landInputPhone clearfix">
+                <span class="landInputText">手机号：</span>
+                <input type="text" class="landInputPhoneText" id="regInputPhoneText">
+            </div>
+			<div class="landInputPhone clearfix" style="display:none;" id="reg_password">
+                <span class="landInputText">登录密码：</span>
+                <input type="password" class="landInputPhoneText" id="password">
+            </div>
+            <div class="landInputCode clearfix">
+                <span class="landInputCodeTitle">验证码：</span>
+                <div class="landInputCodeTextOut clearfix">
+                    <input type="text" class="landInputCodeText" id="regInputCodeText">
+                    <span class="landInputGetCode" onclick="clickBind(this,false)" id="regInputGetCode">获取验证码</span>
+                </div>
+			</div>
+            <div class="landInputOk clearfix" id="regInputOk">
+                <div class="landInputOkClick">注册</div>
+            </div>
+            <div class="regPrompt clearfix" id="regPrompt">
+                <div class="regPromptText">
+                    <span>注册即代表您同意</span>
+                    <a href="javascript:void(0)">《众合世界用户使用协议》</a>
+                </div>
+            </div>
+        </div>
+        <!--关闭按钮-->
+        <div class="landClose uploadBoxClose">
+            <span class="landCloseImg" id="regCloseImg">×</span>
+        </div>
+    </div>
+    <div class="uploadBox" id="uploadBox">
+        <div class="uploadImgBox">
+            <div class="uploadImgBoxT clearfix">
+                
+				<form method="post" id="uploadForm">
+					<span class="uploadFileOut uploadFileOutL">
+						<input type="file" name="file" id="fileFront" value="" accept="image/*" multiple="" onchange="">
+						<div class="uploadFileText">
+							<p class="pAdd">+</p>
+							<p class="pText">請上传身份证正面照片</p>
+						</div>
+					</span>
+				</form>
+				
+				<form enctype="multipart/form-data" method="post" id="uploadForm1">
+                <span class="uploadFileOut uploadFileOutR">
+                    <input type="file" name="file" id="fileReverse" value="" accept="image/*" multiple="" onchange="">
+                    <div class="uploadFileText">
+                        <p class="pAdd">+</p>
+                        <p class="pText">請上传身份证反面照片</p>
+                    </div>
+                </span>
+				</form>
+            </div>
+            <div class="uploadImgBoxB">
+                <form enctype="multipart/form-data" method="post" id="uploadForm2">
+				<span class="uploadFileOut">
+                    <input type="file" name="file" id="fileLicence" value="" accept="image/*" multiple="" onchange="">
+                    <div class="uploadFileText">
+                        <p class="pAdd">+</p>
+                        <p class="pText">請上传营业执照照片</p>
+                    </div>
+                </span>
+				</form>
+            </div>
+        </div>
+        <div class="uploadRegClick clearfix">
+            <div>立即注册</div>
+        </div>
+        <div class="uploadReg clearfix" id="uploadReg">
+            <div class="uploadRegText">
+                <span>注册即代表您同意</span>
+                <a href="javascript:void(0)">《众合世界用户使用协议》</a>
+            </div>
+        </div>
+        <!--关闭按钮-->
+        <div class="landClose uploadBoxClose">
+            <span class="landCloseImg" id="uploadCloseImg">×</span>
+        </div>
+    </div>
+
+</div>
+
+
+<!--[if IE 8]>
+<style type="text/css">
+    #navT {
+        background-color: #fff;
+        filter: alpha(opacity=70);
+    }
+
+    #navO .jt {
+        width: 18px;
+    }
+
+    .yzcz .title_yzcz, .yzty .title_yzcz {
+        width: 250px;
+        height: 90px;
+    }
+</style>
+<![endif]-->
+
+<script src="./众合世界_files/jquery-3.2.1.min.js"></script>
+<script src="./众合世界_files/yz.js"></script>
+<script src="./众合世界_files/jqery.form.js"></script>
+<script>
+var isclick = true;
+$(function(){	
+	var im1 = null;
+	var im2 = null;
+	var im3 = null;
+	
+	// 图片上传
+    $(document).on('change', '#fileFront',function(){
+        var file = this.files;
+        var imgUrl = window.URL.createObjectURL(file[0]);
+        $(this).parent().children('.imgNode').remove()
+        var nodeImg = $('<div class="imgNode"><img src="" alt=""></div>')
+        nodeImg.children('img')[0].src = imgUrl
+        $(this).parent().append(nodeImg)
+        
+		var data = new FormData($('#uploadForm')[0]); 
+		$.ajax({
+			'url': '/index.php/Public/upload_img' ,  
+			'type': 'POST',  
+			'data': data,  
+			'async': false,  
+			'cache': false,  
+			'contentType': false,  
+			'processData': false,  
+			success: function(data){
+				var sdata = $.parseJSON(data);
+				
+				im1 = sdata.data.list[0];
+				
+				
+			}
+		});
+    })
+
+	// 图片上传
+    $(document).on('change', '#fileReverse',function(){
+        var file = this.files;
+        var imgUrl = window.URL.createObjectURL(file[0]);
+        $(this).parent().children('.imgNode').remove()
+        var nodeImg = $('<div class="imgNode"><img src="" alt=""></div>')
+        nodeImg.children('img')[0].src = imgUrl
+        $(this).parent().append(nodeImg)
+        
+		var data = new FormData($('#uploadForm1')[0]); 
+		$.ajax({
+			'url': '/index.php/Public/upload_img' ,  
+			'type': 'POST',  
+			'data': data,  
+			'async': false,  
+			'cache': false,  
+			'contentType': false,  
+			'processData': false,  
+			success: function(data){
+				var sdata = $.parseJSON(data);
+				
+				im2 = sdata.data.list[0];
+				
+				
+			}
+		});
+    })
+
+	// 图片上传
+    $(document).on('change', '#fileLicence',function(){
+        var file = this.files;
+        var imgUrl = window.URL.createObjectURL(file[0]);
+        $(this).parent().children('.imgNode').remove()
+        var nodeImg = $('<div class="imgNode"><img src="" alt=""></div>')
+        nodeImg.children('img')[0].src = imgUrl
+        $(this).parent().append(nodeImg)
+        
+		var data = new FormData($('#uploadForm2')[0]); 
+		$.ajax({
+			'url': '/index.php/Public/upload_img' ,  
+			'type': 'POST',  
+			'data': data,  
+			'async': false,  
+			'cache': false,  
+			'contentType': false,  
+			'processData': false,  
+			success: function(data){
+				var sdata = $.parseJSON(data);
+				
+				im3 = sdata.data.list[0];
+				
+				
+			}
+		});
+    })
+	
+    // 师傅点击注册按钮
+    $('.uploadRegClick div').click(function(){
+		if($('.imgNode img').length != 3){
+			alert('请将信息补充完整')
+		}else{
+			$.ajax({
+				type : "POST",
+				url:"/index.php/Index/add_info",
+				data : {
+					'img_z' : im1,
+					'img_f' : im2,
+					'license_img' : im3,
+				},
+				success: function(data){
+					var sdata = $.parseJSON(data);
+					
+					alert('提交成功');
+				}
+			});
+		}
+    })
+
+	
+})
+// 发送验证码等待时间
+function time(o, wait, regLand) {
+	if (wait == 0) {
+		isclick = true;
+		o.setAttribute("disabled",false);
+		o.innerHTML = "发送验证码";
+		o.style = ''
+		wait = 60;
+	} else {
+		isclick = false;
+		$(o).unbind('click')
+		o.setAttribute("disabled", true);
+		o.innerHTML = wait + "秒后可重发";
+		o.style.color = '#fff'
+		o.style.background = '#999'
+		wait--;
+		setTimeout(function () {
+			time(o, wait)
+		}, 1000)
+	}
+}
+
+
+// 点击发送验证码
+function clickBind(_this, regLand) {
+	if(isclick == false){
+		return false;
+	}
+	
+	// 登录发送验证码
+	if(regLand){
+		//$('#landInputGetCode').click(function () {
+			if ($('#landInputPhoneText').val().length != 11) {
+				alert('您输入的手机号码不正确')
+				return
+			}
+
+			var mobile = $('#landInputPhoneText').val();
+			
+			$.ajax({
+				type : "POST",
+				url:"/index.php/Public/sendMsg",
+				data : {
+					'mobile' : mobile,
+					'type'   : 1,
+				},
+				success: function(data){
+					data = JSON.parse(data);
+					if(data.code == 0){
+						var wait = 60;
+						$(_this).attr("disabled", false);
+						time(_this, wait, regLand);
+					}else{
+						alert(data.msg);
+					}
+					
+				}
+			});
+			
+		   
+		//})
+	// 注册发送验证码
+	}else{
+		//$('#regInputGetCode').click(function () {
+			if ($('#regInputPhoneText').val().length != 11) {
+				alert('您输入的手机号码不正确')
+				return
+			}
+
+			var mobile = $('#regInputPhoneText').val();
+			
+			$.ajax({
+				type : "POST",
+				url:"/index.php/Public/sendMsg",
+				data : {
+					'mobile' : mobile,
+					'type'   : 1,
+				},
+				success: function(data){
+					data = JSON.parse(data);
+					if(data.code == 0){
+						var wait = 60;
+						$(_this).attr("disabled", false);
+						time(_this, wait, regLand)
+					}else{
+						alert(data.msg);
+					}
+					
+				}
+			});
+		//})
+	}
+}
+
+	
+	
+</script>
+
+</body></html>
